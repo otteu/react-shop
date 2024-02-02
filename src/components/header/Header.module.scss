@@ -1,0 +1,46 @@
+.header {
+  position: fixed; // 고정 
+  top: 0;         
+  z-index: 100;      // 순위
+  width: 100%;
+  background-color: #ffff;    
+  box-shadow: 0 3px 11px 0 rgb(0 0 0 / 15%); // 그림자
+}
+
+.header_wrapper {
+  display: flex;  // block 
+  flex-direction: row; // item 가롤로 
+  align-items: center; // y 축 가운데 부터 시작
+  justify-content: space-between; // 양 벽에 붙여서 진열
+  padding: 10px 0;   // 내부 공간 10 뛰우기
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: row;
+
+  span {
+      font-size: 20px;
+  }
+
+  h2 {
+      margin: 0 0 0 10px;
+      font-size: 20px;
+
+      &:hover {
+          color: var(--hover-color);
+          cursor: pointer;
+          transition: 0.3s all ease;
+      }
+  }
+
+  @media (min-width: 768px) {
+      span {
+          font-size: 25px;
+      }
+
+      h2 {
+          font-size: 25px;
+      }
+  }
+}
